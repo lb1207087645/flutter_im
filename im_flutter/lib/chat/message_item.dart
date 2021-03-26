@@ -18,9 +18,9 @@ class MessageItem extends StatelessWidget{
       ),
       height: 64.0,
       // //按下回调处理 空实现
-      child: TouchCallBack(
-        onPressed: (){
-        },
+      // child: TouchCallBack(
+      //   onPressed: (){
+      //   },
         //整体水平方向布局
         child: Row(
           //垂直方向居中显示
@@ -70,7 +70,7 @@ class MessageItem extends StatelessWidget{
             ),
           ],
         ),
-      ),
+      // ),
     );
   }
 }
