@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'chat/message_page.dart';
+import 'chat/message_page.dart';
+import 'contacts/contacts.dart';
+import 'personal/personal.dart';
 class App extends StatefulWidget {
   @override
   _AppState createState() => _AppState();
@@ -10,35 +13,36 @@ class _AppState extends State<App> {
   var _currentIndex = 0;
 
   // //聊天页面
-  // MessagePage message;
+  MessagePage message;
+
   //
   // //好友页面
-  // Contacts contacts;
+  Contacts contacts;
   //
   // //我的页面
-  // Personal me;
+  Personal me;
   //
   // //根据当前索引返回不同的页面
-  // currentPage() {
-  //   switch (_currentIndex) {
-  //     case 0:
-  //       if (message == null) {
-  //         message = MessagePage();
-  //       }
-  //       return message;
-  //     case 1:
-  //       if (contacts == null) {
-  //         contacts = Contacts();
-  //       }
-  //       return contacts;
-  //     case 2:
-  //       if (me == null) {
-  //         me = Personal();
-  //       }
-  //       return me;
-  //     default:
-  //   }
-  // }
+  currentPage() {
+    switch (_currentIndex) {
+      case 0: //第一页
+        if (message == null) {
+          message = MessagePage();
+        }
+        return message;
+      case 1:
+        if (contacts == null) {
+          contacts = Contacts();
+        }
+        return contacts;
+      case 2:
+        if (me == null) {
+          me = Personal();
+        }
+        return me;
+      default:
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -117,6 +121,7 @@ class _AppState extends State<App> {
                     )),
         ],
       ),
+      body: currentPage(),//数据
     );
   }
 }

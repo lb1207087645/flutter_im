@@ -41,7 +41,7 @@ List<MessageData> messageData = [
   ),
   MessageData(
       'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540403409663&di=dedd3829d437cd3dbaf0eff35843aba6&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F0df3d7ca7bcb0a46e22496026063f6246b60af82.jpg',
-      '忍者神龟',
+      '忍者神龟2',
       '忍者神龟。。。。',
       DateTime.now(),
       MessageType.CHAT

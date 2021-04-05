@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'loading.dart';
 import 'app.dart';
+
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       title: '聊天室',
       theme: mDefaultTheme,
-      //静态路由
+      //静态路由，注册用
       routes: <String, WidgetBuilder>{
-           "app": (BuildContext context) => App(),
+        "app": (BuildContext context) => App(),
         "/friends": (_) => WebviewScaffold(
               //Webview插件
               url: "https://flutter.io/",
