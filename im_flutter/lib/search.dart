@@ -26,8 +26,8 @@ class _SearchState extends State<Search> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
 
-            
 
+ 
 
 
           ],
