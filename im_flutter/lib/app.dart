@@ -47,6 +47,55 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      appBar: AppBar(
+        title: Text('即时通讯'),
+        actions: <Widget>[
+          GestureDetector(
+            onTap: () {
+              //跳转至搜索页面
+              Navigator.pushNamed(context, 'search');
+            },
+            child: Icon(//点击搜索按钮跳到搜索页
+              //搜索图标
+              Icons.search,
+            ),
+          ),
+          // Padding(
+          //   //左右内边距
+          //   padding: const EdgeInsets.only(left: 30.0, right: 20.0),
+          //   child: GestureDetector(
+          //     onTap: () {
+          //       //弹出菜单
+          //       showMenu(
+          //         context: context,
+          //         //定位在界面的右上角
+          //         position: RelativeRect.fromLTRB(500.0, 76.0, 10.0, 0.0),
+          //         //展示所有菜单项
+          //         items: <PopupMenuEntry>[
+          //           _popupMenuItem('发起会话',
+          //               imagePath: 'images/icon_menu_group.png'),
+          //           _popupMenuItem('添加好友',
+          //               imagePath: 'images/icon_menu_addfriend.png'),
+          //           _popupMenuItem('联系客服', icon: Icons.person),
+          //         ],
+          //       );
+          //     },
+          //     //菜单按钮
+          //     child: Icon(Icons.add),
+          //   ),
+          // ),
+        ],
+      ),
+
+
+
+
+
+
+
+
+
       bottomNavigationBar: BottomNavigationBar(
         //通过fixedColor设置选中item 的颜色
         type: BottomNavigationBarType.fixed,

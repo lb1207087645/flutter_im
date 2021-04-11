@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'loading.dart';
 import 'app.dart';
-
+import 'search.dart';
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       title: '聊天室',
@@ -19,7 +19,12 @@ void main() => runApp(MaterialApp(
               withZoom: true,
               withLocalStorage: true,
             ),
+
+        "search": (BuildContext context) => Search(),
       },
+
+
+
       home: LoadingPage(),
     ));
 //自定义主题 绿色小清新风格
